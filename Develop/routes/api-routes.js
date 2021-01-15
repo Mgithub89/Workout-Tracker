@@ -1,0 +1,71 @@
+const router = require("express").Router();
+const db = require("../models");
+
+
+//get workout
+router.get("/api/workouts", (req, res) => {
+    console.log("All Workouts");
+    db.Workout.aggregate([
+        {
+            $addFields: {
+                totlaDuration: { $sum: "$exercises.duration" }
+            }
+        }
+    ])
+        .then(dbWorkout => {
+            res.json(dbWorkout);
+        })
+        .catch(err => {
+            res.status(400).json(err);
+        });
+});
+
+//create workout
+router.post("/api/workouts", ({ body }, res) => {
+    db.Workout.create({ body })
+        .then(dbWorkout => {
+            res.json(dbWorkout);
+        })
+        .catch(err => {
+            res.status(400).json(err);
+        });
+})
+
+router.put("/api/workouts/:id", (req, res) => {
+    db.Workout.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+            $inc: { totalDuration: req.body.duration },
+            $push: { exercises: req.body }
+        }).then(dbWorkout => {
+            res.json(dbWorkout);
+        }).catch(err => {
+            res.status(400).json(err);
+        });
+});
+
+router.get("/api/workouts/range", (req, res) => {
+    db.Workout.aggregate([
+        {
+            $sort:
+            {
+                day: -1
+            }
+        },
+        { $limit: 7 },
+        {
+            $addFields: {
+                totalDuration: { $sum: "$exercises.duration" },
+                combinedWeight: { $sum: "$exercises.weight" }
+            }
+        }
+    ]);
+});
+
+
+
+
+
+
+
+module.exports = router;
