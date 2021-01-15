@@ -24,7 +24,9 @@ Explore the [project-page](https://github.com/Mgithub89/Workout-Tracker.git)
 ## usage 
 
 ## Screen Shoot
+1. Last Workout
 ![image](Develop/public/Assets/fitness.PNG)
+2.Last Week Summary
 ![image](Develop/public/Assets/fitness2.PNG)
 
 ## Technologies used
