@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-green.svg "License Badge")
  
-Explore the [project-page](https://github.com/Mgithub89/Employee-Tracker.git)
+Explore the [project-page](https://github.com/Mgithub89/Workout-Tracker.git)
 
 ## Description
  A Workout Tracker App to view,create and track daily workouts to reach your fitness goals more quickly. The App will let you log multiple exercises in a workout on a give day.
@@ -24,8 +24,8 @@ Explore the [project-page](https://github.com/Mgithub89/Employee-Tracker.git)
 ## usage 
 
 ## Screen Shoot
-![image](./public/Assets/fitness.PNG)
-![image](./public/Assets/fitness2.PNG)
+![image]()
+![image](./public/fitness2.PNG)
 
 ## Technologies used
 * HTML
