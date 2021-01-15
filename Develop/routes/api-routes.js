@@ -59,11 +59,13 @@ router.get("/api/workouts/range", (req, res) => {
         },
         { $limit: 7 },
 
-    ]).then(dbWorkout => {
-        res.json(dbWorkout);
-    }).catch(err => {
-        res.status(400).json(err);
-    });
+    ])
+        .then(dbWorkout => {
+            res.json(dbWorkout);
+        })
+        .catch(err => {
+            res.status(400).json(err);
+        });
 });
 
 
