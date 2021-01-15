@@ -24,8 +24,8 @@ Explore the [project-page](https://github.com/Mgithub89/Workout-Tracker.git)
 ## usage 
 
 ## Screen Shoot
-![image]()
-![image](./public/fitness2.PNG)
+![image](Develop/public/Assets/fitness.PNG)
+![image](Develop/public/Assets/fitness2.PNG)
 
 ## Technologies used
 * HTML
