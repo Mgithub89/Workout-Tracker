@@ -2,7 +2,7 @@ const router = require("express").Router();
 const db = require("../models");
 
 
-//get workout
+//get workouts
 router.get("/api/workouts", (req, res) => {
     console.log("All Workouts");
     db.Workout.aggregate([
@@ -31,6 +31,7 @@ router.post("/api/workouts", ({ body }, res) => {
         });
 })
 
+//add an exercise to the exercises array of a given workout id
 router.put("/api/workouts/:id", (req, res) => {
     db.Workout.findOneAndUpdate(
         { _id: req.params.id },
@@ -46,6 +47,7 @@ router.put("/api/workouts/:id", (req, res) => {
         });
 });
 
+//get workouts in range(last 7)
 router.get("/api/workouts/range", (req, res) => {
     db.Workout.aggregate([
         {
