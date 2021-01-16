@@ -2,7 +2,9 @@
 
 ![License](https://img.shields.io/badge/License-MIT-green.svg "License Badge")
  
-Explore the [project-page](https://github.com/Mgithub89/Workout-Tracker.git)
+Explore the [project-page](https://github.com/Mgithub89/Workout-Tracker.git).
+
+View the [Deloyed App](https://sleepy-waters-39572.herokuapp.com)
 
 ## Description
  A Workout Tracker App to view,create and track daily workouts to reach your fitness goals more quickly. The App will let you add multiple exercises to the most recent workout plan and to the new workout plan, view the combined weight of multiple exercises from the past seven workouts and view the total duration of each workout from the past seven workouts.
